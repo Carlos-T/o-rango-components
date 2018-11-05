@@ -7,7 +7,7 @@
 
 import '@stencil/core';
 
-
+import '@o-rango/o-button';
 
 
 export namespace Components {

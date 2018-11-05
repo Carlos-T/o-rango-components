@@ -20,6 +20,7 @@ export namespace Components {
     'rounded'?: boolean;
     'size'?: string;
     'target'?: string;
+    'test'?: string;
     'type': string;
   }
   interface OButtonAttributes extends StencilHTMLAttributes {
@@ -30,6 +31,7 @@ export namespace Components {
     'rounded'?: boolean;
     'size'?: string;
     'target'?: string;
+    'test'?: string;
     'type'?: string;
   }
 }

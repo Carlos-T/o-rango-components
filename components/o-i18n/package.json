@@ -1,11 +1,9 @@
 {
-  "name": "@o-rango/o-alert",
-  "version": "0.3.2",
-  "description": "@o-rango/o-alert",
-  "module": "dist/esm/index.js",
-  "main": "dist/index.js",
-  "types": "dist/types/components.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
+  "name": "@o-rango/o-i18n",
+  "version": "0.0.1",
+  "description": "@o-rango/o-i18n",
+  "main": "dist/o-i18n.js",
+  "types": "dist/o-i18n.d.ts",
   "files": [
     "dist/"
   ],
@@ -18,12 +16,14 @@
     "start-prod": "stencil build --prod --watch --serve",
     "test": "jest",
     "test:ci": "jest --ci",
-    "test.watch": "jest --watch"
+    "test.watch": "jest --watch",
+    "tsc": "tsc"
   },
   "devDependencies": {
     "@stencil/core": "0.15.0-0",
     "@stencil/postcss": "^0.1.0",
     "@stencil/sass": "0.1.1",
+    "@types/i18next": "^11.9.3",
     "@types/jest": "^23.3.1",
     "autoprefixer": "^9.0.2",
     "jest": "^23.4.2",
@@ -48,7 +48,7 @@
   },
   "gitHead": "2936be651042bb20b998bc8bf40418799b604317",
   "dependencies": {
-    "@o-rango/o-i18n": "^0.0.1",
-    "@o-rango/o-button": "^0.2.2"
+    "@o-rango/o-button": "^0.2.2",
+    "i18next": "^12.0.0"
   }
 }
