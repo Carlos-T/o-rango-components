@@ -27,6 +27,7 @@
     "@types/jest": "^23.3.1",
     "autoprefixer": "^9.0.2",
     "jest": "^23.4.2",
+    "ts-jest": "^23.10.4",
     "workbox-build": "3.4.1"
   },
   "author": "@o-rango",
@@ -35,9 +36,9 @@
   "jest": {
     "collectCoverage": true,
     "transform": {
-      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+      "^.+\\.(ts|tsx)$": "ts-jest"
     },
-    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(tsx?|jsx?)$",
     "moduleFileExtensions": [
       "ts",
       "tsx",
@@ -48,7 +49,6 @@
   },
   "gitHead": "2936be651042bb20b998bc8bf40418799b604317",
   "dependencies": {
-    "@o-rango/o-button": "^0.2.2",
     "i18next": "^12.0.0"
   }
 }

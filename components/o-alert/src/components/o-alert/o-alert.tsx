@@ -2,7 +2,7 @@
 declare type CssClassMap = { [className: string]: boolean };
 
 import { Component, Prop } from '@stencil/core';
-import oI18n from '@o-rango/o-i18n';
+import OI18n from '@o-rango/o-i18n';
 // import i18next from 'i18next';
 import i18n from './i18n';
 
@@ -18,7 +18,7 @@ export class OAlertComponent {
 private i18n;
 
   constructor () {
-    this.i18n = new oI18n('oAlert', i18n);
+    this.i18n = new OI18n('oAlert', i18n);
   }
 
   @Prop() alertId?: string;
@@ -27,9 +27,9 @@ private i18n;
   @Prop() line: boolean = false;
 
   render() {
-
-    let trans = this.i18n.t('oAlert:test2', {tag1: '<i>', tag2: '</i>', text: 'this is a text'});
-
+    console.log(this.i18n);
+    let trans = this.i18n.html('oAlert:test2', {tag1: '<i>', tag2: '</i>', text: 'this is a text'});
+    console.log(trans);
     const types = ['info', 'success', 'error', 'default', 'warning'];
 
     const cssClassName = types.includes(this.type) && this.line ? `o-alert-line-${this.type}`
@@ -50,11 +50,9 @@ private i18n;
     return (
       <div id={this.alertId} class={typeClasses} role="alert">
         <slot name="start"></slot>
+        {trans}
         <span class={alignClasses}><slot></slot></span>
-        <div innerHTML={trans} />
         <slot name="end"></slot>
-        <o-button>{this.i18n.t('oAlert:test')}</o-button>
-        {/* {this.i18n.html('oAlert:test')} */}
       </div>
     );
   }

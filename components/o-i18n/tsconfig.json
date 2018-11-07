@@ -4,6 +4,8 @@
     "allowUnreachableCode": false,
     "declaration": true,
     "experimentalDecorators": true,
+    "jsxFactory": "h",
+    "jsx": "react",
     "lib": [
       "dom",
       "es7"
@@ -14,13 +16,13 @@
     "resolveJsonModule": true,
     "target": "es2017",
     "noUnusedLocals": true,
-    "noUnusedParameters": true
+    "noUnusedParameters": true,
   },
   "include": [
     "src"
   ],
   "exclude": [
     "node_modules",
-    "**/*-spec*"
+    "**/*spec.ts"
   ]
 }
